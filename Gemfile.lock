@@ -1,3 +1,8 @@
+PATH
+  remote: .
+  specs:
+    fresh_erd (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -17,6 +22,7 @@ GEM
     arel (6.0.3)
     builder (3.2.2)
     choice (0.2.0)
+    diff-lcs (1.2.5)
     i18n (0.7.0)
     json (1.8.3)
     minitest (5.8.4)
@@ -25,6 +31,20 @@ GEM
       activesupport (>= 3.2)
       choice (~> 0.2.0)
       ruby-graphviz (~> 1.2)
+    rake (10.5.0)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
     ruby-graphviz (1.2.2)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
@@ -34,7 +54,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rails-erd
+  bundler (~> 1.11)
+  fresh_erd!
+  rails-erd (~> 1.4)
+  rake (~> 10.0)
+  rspec (~> 3.0)
 
 BUNDLED WITH
    1.11.2
