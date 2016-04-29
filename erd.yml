@@ -1,0 +1,8 @@
+diagrams:
+  tweet:
+    - User
+    - Micropost
+  all:
+    - User
+    - Micropost
+    - Relationship
