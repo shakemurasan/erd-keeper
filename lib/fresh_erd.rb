@@ -22,3 +22,15 @@ module FreshErd
     system "bundle exec erd --only='#{models.join(",")}' --filename=#{diagram_name} --filetype=png"
   end
 end
+
+module InspectRepository
+  def self.files_modified_since
+    ref = `git merge-base HEAD master`.chomp
+    return unless ref
+
+    files = `git diff --diff-filter=AM --name-only #{ref}`.lines.map(&:chomp).grep(/\.rb$/)
+    files = files.select { |file| File.dirname(file).include?("models") }
+    files = files.map { |file| File.basename(file) }
+    files
+  end
+end

@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    fresh_erd (0.0.1)
+    fresh_erd (0.0.3)
+      rails-erd (~> 1.4)
 
 GEM
   remote: https://rubygems.org/
@@ -56,7 +57,6 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.11)
   fresh_erd!
-  rails-erd (~> 1.4)
   rake (~> 10.0)
   rspec (~> 3.0)
 
