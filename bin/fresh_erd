@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-
-require "bundler/setup"
 require "fresh_erd"
 
 FreshErd.exec

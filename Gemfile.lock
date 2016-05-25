@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    fresh_erd (0.0.3)
-      rails-erd (~> 1.4)
+    fresh_erd (0.2.0)
+      rails-erd (~> 1.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -22,16 +22,16 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     builder (3.2.2)
-    choice (0.2.0)
+    choice (0.1.7)
     diff-lcs (1.2.5)
     i18n (0.7.0)
     json (1.8.3)
-    minitest (5.8.4)
-    rails-erd (1.4.7)
-      activerecord (>= 3.2)
-      activesupport (>= 3.2)
-      choice (~> 0.2.0)
-      ruby-graphviz (~> 1.2)
+    minitest (5.9.0)
+    rails-erd (1.1.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      choice (~> 0.1.6)
+      ruby-graphviz (~> 1.0.4)
     rake (10.5.0)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
@@ -46,7 +46,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    ruby-graphviz (1.2.2)
+    ruby-graphviz (1.0.9)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -61,4 +61,4 @@ DEPENDENCIES
   rspec (~> 3.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.3
