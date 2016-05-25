@@ -1,6 +1,6 @@
 # Fresh::Erd
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fresh/erd`. To experiment with that code, run `bin/console` for an interactive prompt.
+Introduction.(TBD)
 
 ## Preview
 
@@ -8,9 +8,9 @@ TBD(img)
 
 ## Requirements
 
-Ruby 2.0.0+
-ActiveRecord 3.x
-rails-erd 1.1.0+
+- Ruby 2.0.0+
+- ActiveRecord 3.x
+- rails-erd 1.1.0+
 
 
 ## Getting started
