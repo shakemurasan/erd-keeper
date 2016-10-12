@@ -19,7 +19,9 @@ module FreshErd
   end
 
   def self.output_erd(diagram_name = "erd", models = nil)
-    system "bundle exec erd --only='#{models.join(",")}' --filename=#{diagram_name} --filetype=png"
+    system "bundle exec erd --only='#{models.join(",")}' "\
+           "--inheritance=true "\
+           "--filename=#{diagram_name} --filetype=png"
   end
 end
 
