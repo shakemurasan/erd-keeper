@@ -1,4 +1,15 @@
 #!/usr/bin/env ruby
+require "thor"
 require "fresh_erd"
 
-FreshErd.exec
+class Command < Thor
+  default_command :generate
+
+  desc "generate", "generate ER diagrams."
+  method_option :file, type: :string, desc: "Specify the path of the configuration file"
+  def generate
+    FreshErd.exec(options[:file])
+  end
+end
+
+Command.start

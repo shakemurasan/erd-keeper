@@ -1,12 +1,10 @@
 require "yaml"
 require "fresh_erd/version"
 
-CONFIG_YAML = "fresh_erd.yml"
-
 module FreshErd
-  def self.exec
-    if File.exist?(CONFIG_YAML)
-      load_yaml = YAML.load_file(CONFIG_YAML)
+  def self.exec(file)
+    if File.exist?(file)
+      load_yaml = YAML.load_file(file)
       diagrams = load_yaml["diagrams"]
 
       diagrams.each do |diagram_name , diagram|
