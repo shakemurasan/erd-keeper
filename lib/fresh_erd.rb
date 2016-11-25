@@ -12,25 +12,17 @@ module FreshErd
         output_erd(diagram_name, models)
       end
     else
-      system "bundle exec erd --filename=project --filetype=png"
+      puts "--- File not found!"
+      puts "--- Instead, it outputs for all models."
+      system "bundle exec erd --title='All domain model' --filename=project --filetype=png"
     end
   end
 
   def self.output_erd(diagram_name = "erd", models = nil)
+    return if models.nil?
     system "bundle exec erd --only='#{models.join(",")}' "\
            "--inheritance=true "\
+           "--title='#{diagram_name}' "\
            "--filename=#{diagram_name} --filetype=png"
-  end
-end
-
-module InspectRepository
-  def self.files_modified_since
-    ref = `git merge-base HEAD master`.chomp
-    return unless ref
-
-    files = `git diff --diff-filter=AM --name-only #{ref}`.lines.map(&:chomp).grep(/\.rb$/)
-    files = files.select { |file| File.dirname(file).include?("models") }
-    files = files.map { |file| File.basename(file) }
-    files
   end
 end
