@@ -18,7 +18,7 @@ TBD(img)
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'fresh-erd'
+gem 'fresh_erd'
 ```
 
 And then execute:
@@ -47,10 +47,6 @@ diagrams:
 And then execute:
 
     $ bundle exec fresh_erd
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/muramurasan/fresh-erd.
 
 
 ## License
