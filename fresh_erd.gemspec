@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{FreshERD is a gem that outputs ER diagram by setting yaml.}
   spec.description   = %q{FreshERD is a gem that outputs ER diagram by setting yaml. The output of ER diagram is realized by wrapping call of rails-erd.}
-  spec.homepage      = "https://github.com/muramurasan"
+  spec.homepage      = "https://github.com/muramurasan/fresh_erd"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
