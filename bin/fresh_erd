@@ -6,7 +6,10 @@ class Command < Thor
   default_command :generate
 
   desc "generate", "generate ER diagrams."
-  method_option :file, type: :string, desc: "Specify the path of the configuration file"
+  method_option :file,
+                type: :string,
+                default: "fresh_erd.yml",
+                desc: "Specify the path of the configuration file"
   def generate
     FreshErd.exec(options[:file])
   end
