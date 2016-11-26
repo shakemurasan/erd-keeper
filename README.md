@@ -19,11 +19,6 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install fresh_erd
-
-
 ## Usage
 
 Create configuration file (Write your application's Active Record models):
