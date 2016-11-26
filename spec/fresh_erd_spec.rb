@@ -11,7 +11,6 @@ describe Command do
   let(:diagrams) { { tweet: %w(User Micropost) } }
 
   before do
-    # allow_any_instance_of(FreshErd::GenerateErd).to receive(:load_diagrams).and_return(diagrams)
     allow_any_instance_of(FreshErd::GenerateErd).to receive(:generate_domain_erd)
     allow_any_instance_of(FreshErd::GenerateErd).to receive(:generate_project_erd)
     $stdout = StringIO.new
