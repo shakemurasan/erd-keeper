@@ -41,7 +41,6 @@ module FreshErd
     end
 
     def generate_domain_erd(diagram_name = "erd", models = nil, folder = ".")
-      return if models.nil?
       system "bundle exec erd --only='#{models.join(",")}' "\
              "--inheritance=true "\
              "--title='#{diagram_name}' "\
