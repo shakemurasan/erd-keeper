@@ -1,16 +1,8 @@
-# Fresh::Erd
+# FreshERD
 
-Introduction.(TBD)
+FreshERD is a gem that outputs ER diagram by setting yaml.
 
-## Preview
-
-TBD(img)
-
-## Requirements
-
-- Ruby 2.0.0+
-- ActiveRecord 3.x
-- rails-erd 1.1.0+
+The output of ER diagram is realized by wrapping call of [rails-erd](https://github.com/voormedia/rails-erd).
 
 
 ## Getting started
@@ -31,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-Create configuration file for 'fresh_erd':
+Create configuration file:
 
 ```yml
 diagrams:
@@ -46,8 +38,12 @@ diagrams:
 
 And then execute:
 
-    $ bundle exec fresh_erd
+    $ bundle exec fresh_erd --input="config/fresh_erd.yml" --output="./"
 
+### Options
+
+- --input : Write the path of the configuration file.
+- --output : Write the path of the output ER diagram.
 
 ## License
 
