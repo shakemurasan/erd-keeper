@@ -26,10 +26,7 @@ module FreshErd
     private
 
     def generate_erd_by_setting(input, output)
-      load_yaml = YAML.load_file(input)
-      diagrams = load_yaml["diagrams"]
-
-      diagrams.each do |diagram_name , diagram|
+      load_diagrams(input).each do |diagram_name , diagram|
         puts "--- Generate ERD : #{diagram_name}"
         if diagram.nil?
           puts "--- #{diagram_name}: The models are not described!"
@@ -38,6 +35,11 @@ module FreshErd
         models = diagram.map { |m| m }
         generate_domain_erd(diagram_name, models, output)
       end
+    end
+
+    def load_diagrams(yaml)
+      load_yaml = YAML.load_file(yaml)
+      load_yaml["diagrams"]
     end
 
     def generate_domain_erd(diagram_name = "erd", models = nil, folder = ".")
