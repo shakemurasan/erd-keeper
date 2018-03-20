@@ -24,4 +24,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_dependency "rails-erd", "~> 1.1"
   spec.add_dependency "thor"
+
+  spec.post_install_message = <<-MESSAGE
+ ! The 'fresh_erd' gem has been deprecated and has been replaced by 'erd-keeper'.
+ ! See: https://rubygems.org/gems/erd-keeper
+ ! And: https://github.com/muramurasan/erd-keeper
+  MESSAGE
 end

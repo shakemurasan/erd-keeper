@@ -4,6 +4,8 @@ require "fresh_erd/version"
 module FreshErd
   class GenerateErd
     def exec(input, output)
+      warn "[DEPRECATION] This gem has been renamed to `erd-keeper` and will no longer be supported. Please switch to `erd-keeper` as soon as possible."
+
       if Dir.exist?(output)
         while(output[-1] == "/")
           output.chop!
