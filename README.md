@@ -1,6 +1,6 @@
-# FreshERD
+# ErdKeeper
 
-FreshERD is a gem that outputs ER diagram by setting yaml.
+ErdKeeper is a gem that outputs ER diagram by setting yaml.
 
 The output of ER diagram is realized by wrapping call of [rails-erd](https://github.com/voormedia/rails-erd).
 
@@ -12,7 +12,7 @@ This gem generate a diagram based on your application's Active Record models.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'fresh_erd'
+gem 'erd-keeper'
 ```
 
 And then execute:
@@ -36,7 +36,7 @@ diagrams:
 
 And then execute:
 
-    $ bundle exec fresh_erd --input="config/fresh_erd.yml" --output="./"
+    $ bundle exec erd-keeper --input="config/erd-keeper.yml" --output="./"
 
 
 ### Options

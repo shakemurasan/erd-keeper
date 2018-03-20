@@ -1,8 +1,8 @@
 require 'command'
 
-describe FreshErd do
+describe ErdKeeper do
   it 'has a version number' do
-    expect(FreshErd::VERSION).not_to be nil
+    expect(ErdKeeper::VERSION).not_to be nil
   end
 end
 
@@ -11,8 +11,8 @@ describe Command do
   let(:diagrams) { { tweet: %w(User Micropost) } }
 
   before do
-    allow_any_instance_of(FreshErd::GenerateErd).to receive(:generate_domain_erd)
-    allow_any_instance_of(FreshErd::GenerateErd).to receive(:generate_project_erd)
+    allow_any_instance_of(ErdKeeper::GenerateErd).to receive(:generate_domain_erd)
+    allow_any_instance_of(ErdKeeper::GenerateErd).to receive(:generate_project_erd)
     $stdout = StringIO.new
     Command.new.invoke(:generate, [], options)
   end
@@ -25,7 +25,7 @@ describe Command do
   end
 
   context "入力ファイルの場所をオプションで指定" do
-    let(:options) { { input: "spec/support/fresh_erd.yml" } }
+    let(:options) { { input: "spec/support/erd-keeper.yml" } }
     it { is_expected.to include "--- Generate ERD : tweet" }
     it { is_expected.to include "--- Generate ERD : all" }
   end
@@ -37,13 +37,13 @@ describe Command do
   end
 
   context "出力ファイルの場所をオプションで指定" do
-    let(:options) { { input: "spec/support/fresh_erd.yml", output: "spec/support/" } }
+    let(:options) { { input: "spec/support/erd-keeper.yml", output: "spec/support/" } }
     it { is_expected.to include "--- Generate ERD : tweet" }
     it { is_expected.to include "--- Generate ERD : all" }
   end
 
   context "出力ファイルの場所をオプションで指定(出力フォルダが見つからない)" do
-    let(:options) { { input: "spec/support/fresh_erd.yml", output: "spec/dummy/" } }
+    let(:options) { { input: "spec/support/erd-keeper.yml", output: "spec/dummy/" } }
     it { is_expected.to include "--- output: Folder not found!" }
     it { is_expected.to include "--- Stop the output of ERD." }
   end

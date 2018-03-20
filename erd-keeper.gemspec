@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'fresh_erd/version'
+require 'erd-keeper/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "fresh_erd"
-  spec.version       = FreshErd::VERSION
+  spec.name          = "erd-keeper"
+  spec.version       = ErdKeeper::VERSION
   spec.authors       = ["Yasuhiro Matsumura"]
   spec.email         = ["ym.contributor@gmail.com"]
 
-  spec.summary       = %q{FreshERD is a gem that outputs ER diagram by setting yaml.}
-  spec.description   = %q{FreshERD is a gem that outputs ER diagram by setting yaml. The output of ER diagram is realized by wrapping call of rails-erd.}
-  spec.homepage      = "https://github.com/muramurasan/fresh_erd"
+  spec.summary       = %q{ErdKeeper is a gem that outputs ER diagram by setting yaml.}
+  spec.description   = %q{ErdKeeper is a gem that outputs ER diagram by setting yaml. The output of ER diagram is realized by wrapping call of rails-erd.}
+  spec.homepage      = "https://github.com/muramurasan/erd-keeper"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

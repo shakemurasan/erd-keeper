@@ -1,7 +1,7 @@
 require "yaml"
-require "fresh_erd/version"
+require "erd-keeper/version"
 
-module FreshErd
+module ErdKeeper
   class GenerateErd
     def exec(input, output)
       if Dir.exist?(output)
